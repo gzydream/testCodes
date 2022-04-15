@@ -1,0 +1,10 @@
+import urllib.request
+
+def main():
+    req=urllib.request.urlopen("https://apd-vlive.apdcdn.tc.qq.com/vipzj.video.tc.qq.com/g0024tbqc6k.mp4?vkey=1EEF468DE094FAF8C7A885C4AC8AC2E5EB462CA3FA2899A4031C6452E2EC7F299EA387E262BD7FA6CAC3842C7EEB9E90D5034F9C0E17AF323979D22C0C854BCD97B3F9D0EBF6B9ACE7E77C2CA5A7BD34EB31CDAA64989F49B1AC9D6BA34D707144633FFF9474ECCF86F1A288899B4B85881168937DCCAE518DF966EE25AB5D44179D04878DF41F37")
+    movieContent=req.read()
+    with open("test.mp4","wb") as f:
+        f.write(movieContent)
+
+if __name__ == '__main__':
+    main()
